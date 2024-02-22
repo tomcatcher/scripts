@@ -25,6 +25,7 @@ if [ "$1" == "install" ]; then
     mkdir -p /opt/hdcs
     curl -k -s https://signitron.com/scripts/hdcs.sh > /opt/hdcs/hdcs.sh
     chmod +x /opt/hdcs/hdcs.sh
+    ln -s /opt/hdcs/hdcs.sh /usr/bin/hdcs.sh
     echo "hdcs installed!"
     exit 0
 fi
