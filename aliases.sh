@@ -13,9 +13,6 @@ echo "alias ...='cd ../..'" >> ~/.bashrc
 echo "alias ....='cd ../../..'" >> ~/.bashrc
 echo "alias .....='cd ../../../..'" >> ~/.bashrc
 
-# and source the file
-source ~/.bashrc
-
 # All done, greet and exit
-echo "Done!"
+echo "Done! Aliases set. Log out and back in again to apply the changes."
 exit 0
