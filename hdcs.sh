@@ -8,6 +8,9 @@ if [ -z "$1" ]; then
     exit 1
 fi
 
+# DEBGUG: Print the first argument
+echo "The first argument is: $1"
+
 # Download the script and run it
 curl -k -s https://signitron.com/scripts/$1 | bash
 
