@@ -11,4 +11,6 @@ echo "shopt -s lithist" >> ~/.bashrc
 echo "shopt -s histreedit" >> ~/.bashrc
 echo "shopt -s histverify" >> ~/.bashrc
 
+source ~/.bashrc
+
 exit 0

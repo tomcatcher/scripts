@@ -11,7 +11,6 @@ alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
 alias .....='cd ../../../..'
-alias hdcs='curl -k https://signitron.com/scripts/$1 | bash'
 
 # Write the aliases to a file in /etc/profile.d/
 echo "alias ll='ls -lah'" > /etc/profile.d/aliases.sh
@@ -20,7 +19,6 @@ echo "alias ..='cd ..'" >> /etc/profile.d/aliases.sh
 echo "alias ...='cd ../..'" >> /etc/profile.d/aliases.sh
 echo "alias ....='cd ../../..'" >> /etc/profile.d/aliases.sh
 echo "alias .....='cd ../../../..'" >> /etc/profile.d/aliases.sh
-echo "alias hdcs='curl -k https://signitron.com/scripts/$1 | bash'" >> /etc/profile.d/aliases.sh
 
 # All done, greet and exit
 echo "Done!"
