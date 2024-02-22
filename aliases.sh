@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 
-# This file loads my aliases at the beginning of each session. It is to be placed into /etc/profile.d/aliases.sh
+# This file loads my aliases at the beginning of each session. It is to be placed into ~/.bashrc
 
 # Aliases
 alias ll='ls -lah'
