@@ -10,7 +10,8 @@ else
     sudo apt-get install curl
     curl -s https://packagecloud.io/install/repositories/ookla/speedtest-cli/script.deb.sh | sudo bash
     sudo apt-get install speedtest
-    echo "speedtest installed. Running test..."
+    echo "Speedtest installed. Exiting. Pease start speedtest manualy by entering 'speedtest' in the terminal. Accept the license agreements and re-run this script. Exiting..."
+    exit 0
 fi
 
 # Running the test
