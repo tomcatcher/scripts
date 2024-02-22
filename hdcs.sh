@@ -13,7 +13,7 @@ fi
 # If first parameter is "update", update the script itself
 if [ "$1" == "update" ]; then
     echo "Updating hdcs..."
-    curl -k -s https://signitron.com/scripts/hdcs.sh > /opt/hdcs.hdcs.sh
+    curl -k -s https://signitron.com/scripts/hdcs.sh > /opt/hdcs/hdcs.sh
     chmod +x /opt/hdcs.hdcs.sh
     echo "hdcs updated!"
     exit 0
