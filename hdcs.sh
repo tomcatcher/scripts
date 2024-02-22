@@ -9,7 +9,7 @@ if [ -z "$1" ]; then
 fi
 
 # Download the script and run it
-curl -k https://signitron.com/scripts/$1 | bash
+curl -k -s https://signitron.com/scripts/$1 | bash
 
 # All done
 exit 0
