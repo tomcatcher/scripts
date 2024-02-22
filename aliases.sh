@@ -4,14 +4,6 @@
 
 # Aliases
 
-# First, apply the aliases on the fly
-alias ll='ls -lah'
-alias ltr='ls -ltrah'
-alias ..='cd ..'
-alias ...='cd ../..'
-alias ....='cd ../../..'
-alias .....='cd ../../../..'
-
 # Write the aliases to a file in /etc/profile.d/
 echo "alias ll='ls -lah'" > /etc/profile.d/aliases.sh
 echo "alias ltr='ls -ltrah'" >> /etc/profile.d/aliases.sh
@@ -19,6 +11,9 @@ echo "alias ..='cd ..'" >> /etc/profile.d/aliases.sh
 echo "alias ...='cd ../..'" >> /etc/profile.d/aliases.sh
 echo "alias ....='cd ../../..'" >> /etc/profile.d/aliases.sh
 echo "alias .....='cd ../../../..'" >> /etc/profile.d/aliases.sh
+
+#, and source the file
+source /etc/profile.d/aliases.sh
 
 # All done, greet and exit
 echo "Done!"
