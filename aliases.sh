@@ -5,20 +5,20 @@
 # Aliases
 
 # First, apply the aliases on the fly
-export alias ll='ls -lah'
-export alias ltr='ls -ltrah'
-export alias ..='cd ..'
-export alias ...='cd ../..'
-export alias ....='cd ../../..'
-export alias .....='cd ../../../..'
+alias ll='ls -lah'
+alias ltr='ls -ltrah'
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias .....='cd ../../../..'
 
 # Write the aliases to a file in /etc/profile.d/
-echo "export alias ll='ls -lah'" > /etc/profile.d/aliases.sh
-echo "export alias ltr='ls -ltrah'" >> /etc/profile.d/aliases.sh
-echo "export alias ..='cd ..'" >> /etc/profile.d/aliases.sh
-echo "export alias ...='cd ../..'" >> /etc/profile.d/aliases.sh
-echo "export alias ....='cd ../../..'" >> /etc/profile.d/aliases.sh
-echo "export alias .....='cd ../../../..'" >> /etc/profile.d/aliases.sh
+echo "alias ll='ls -lah'" > /etc/profile.d/aliases.sh
+echo "alias ltr='ls -ltrah'" >> /etc/profile.d/aliases.sh
+echo "alias ..='cd ..'" >> /etc/profile.d/aliases.sh
+echo "alias ...='cd ../..'" >> /etc/profile.d/aliases.sh
+echo "alias ....='cd ../../..'" >> /etc/profile.d/aliases.sh
+echo "alias .....='cd ../../../..'" >> /etc/profile.d/aliases.sh
 
 # All done, greet and exit
 echo "Done!"
