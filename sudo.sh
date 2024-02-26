@@ -13,7 +13,7 @@ else
 fi
 
 # Add catcher user to sudoers, but first check, if user catcher exists. If not, create it. Assume this script is being run as root.
-id -u catcher &>/dev/null || useradd -u 1000 -g 1000 catcher
+id -u catcher &>/dev/null || useradd -u 1000 catcher
 
 # Add catcher to sudoers
 echo "catcher ALL=(ALL) NOPASSWD:ALL" > /etc/sudoers.d/catcher
