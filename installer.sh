@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Install sudo, curl, git, nano
-sudo apt-get update
-sudo apt-get install -y sudo curl git nano
+apt-get update
+apt-get install -y sudo curl git nano
 
 # Move to /opt
 cd /opt
