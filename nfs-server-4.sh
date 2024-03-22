@@ -17,12 +17,12 @@ mkdir /mnt/export
 groupadd -g 1000 catcher
 useradd -u 1000 -g 1000 catcher
 
-# Set up ACL on flder to be exported
+# Set up ACL on folder to be exported
 chown catcher:catcher /mnt/export
 
 # Set up NFS exports in /etc/exports
 # /mnt/export 10.0.0.0/24(rw,sync,no_subtree_check,anonuid=33,anongid=33)
-echo "/mnt/export 10.0.0.0/24(rw,sync,no_subtree_check,anonuid=1000,anongid=1000)" > /etc/exports
+echo "/mnt/export 10.2.0.0/16(rw,sync,no_subtree_check,anonuid=1000,anongid=1000)" > /etc/exports
 
 # Restart nfs-kernel-server and nfs-server
 systemctl restart nfs-kernel-server
