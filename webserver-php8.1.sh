@@ -6,7 +6,7 @@ echo "deb https://packages.sury.org/php/ bookworm main" > /etc/apt/sources.list.
 apt -y install lsb-release ca-certificates curl wget gnupg2 > /dev/null 2>&1 && \
         echo "Prerequisites installed" || exit 2
 wget -qO- https://packages.sury.org/php/apt.gpg | gpg --dearmor > /etc/apt/trusted.gpg.d/sury-php-x.x.gpg && \
-        echo "Key for repo set up" || && exit 3
+        echo "Key for repo set up" || exit 3
 apt update && echo "APT refreshed" || exit 3
 apt -y install apache2 apache2-bin apache2-data apache2-doc apache2-utils fontconfig-config fonts-dejavu-core \
                iptraf-ng iso-codes iucode-tool lsb-release make php-common php8.1 php8.1-cli \
