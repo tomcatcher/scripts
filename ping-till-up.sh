@@ -18,14 +18,16 @@ interval=$3
 # Wait till the host stops responding
 while true; do
     # Ping the host
-    ping -c 1 -W 1 $host
+    ping -c 1 -W 1 $host 2>&1 > /dev/null
 
     # Check the exit status of the ping command
     if [ $? -eq 0 ]; then
         # Host is up, sleep for the timeout
+        echo "Host is still up. Waiting till it goes down..."
         sleep $timeout
     else
         # Host is down, break the loop
+        echo "Host is down. Waiting for it to come back up..."
         break
     fi
 done
@@ -34,16 +36,18 @@ done
 timer=0
 while true; do
     # Ping the host
-    ping -c 1 -W 1 $host
+    ping -c 1 -W 1 $host 2>&1 > /dev/null
 
     # Check the exit status of the ping command
     if [ $? -eq 0 ]; then
         # Host is up, break the loop
+        echo "Host is up! Exiting happily!"
         break
     else
         # Host is down, sleep for the interval
         sleep $interval
         timer=$((timer + interval))
+        echo "Host is still down. Waiting for it to come back up... ($timer seconds)"
         if [ $timer -gt 300 ]; then
             echo "Waiting for $host to come up for too long ($timer seconds)... Exiting ungracefuly"
             exit 2
