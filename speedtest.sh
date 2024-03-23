@@ -17,7 +17,7 @@ fi
 
 # Running the test
 
-speedtest
+speedtest -s 30620
 
 # Done! Great and exit.
 echo "Done!"
