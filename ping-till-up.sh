@@ -18,7 +18,7 @@ interval=$3
 # Wait till the host stops responding
 while true; do
     # Ping the host
-    ping -c 1 $host
+    ping -c 1 -W 1 $host
 
     # Check the exit status of the ping command
     if [ $? -eq 0 ]; then
@@ -34,7 +34,7 @@ done
 timer=0
 while true; do
     # Ping the host
-    ping -c 1 $host
+    ping -c 1 -W 1 $host
 
     # Check the exit status of the ping command
     if [ $? -eq 0 ]; then
