@@ -36,11 +36,11 @@ with open('inbox.box', 'a', encoding='utf-8') as f:
                 # Parse the date of the email
                 date = parsedate_to_datetime(msg['Date'])
 
-                # Output the year
-                print(f'Processing email from year: {date.year}')
+                # Output the full date and time
+                print(f'Processing email from date and time: {date}')
 
-                # Ignore emails not from 2018
-                if date.year != 2018:
+                # Ignore emails not from 2019 onwards
+                if date.year < 2019:
                     continue
 
                 # Decode the email subject
@@ -52,9 +52,9 @@ with open('inbox.box', 'a', encoding='utf-8') as f:
                     # decode to str
                     try:
                         # if encoding is None, use default 'utf-8'
-                        subject = subject.decode(encoding if encoding else 'utf-8')
+                        subject = subject.decode(encoding if encoding else 'utf-8', errors='ignore')
                     except LookupError:
-                        subject = subject.decode('utf-8')
+                        subject = subject.decode('utf-8', errors='ignore')
 
                 # Transcode the filename to utf8, trim the beginning and end from empty spaces, replace empty spaces and commas and slashes with a hyphen
                 subject = subject.encode('utf-8').decode('utf-8').strip().replace(' ', '-').replace(',', '-').replace('/', '-').replace('\\', '-')
